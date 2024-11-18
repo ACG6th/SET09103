@@ -10,7 +10,7 @@ env = dotenv.dotenv_values(".env")
 
 # Create the Flask app
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'my-secret_key'
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db' #have user's info saved
 db = SQLAlchemy(app) #create a db with sqlalchemy
 login_manager = LoginManager(app)
